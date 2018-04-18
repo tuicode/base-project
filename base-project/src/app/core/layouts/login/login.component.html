@@ -1,0 +1,64 @@
+<div class="login-wrapper">
+  <div class="login-header">
+    <ul class="top-links">
+      <li>
+        <a href="">
+          <span class="fas fa-map-marker"></span> Find Us
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span class="fas fa-info-circle"></span> Help &amp; Support
+        </a>
+      </li>
+    </ul>
+    <div class="msg-container">
+      <div class="header-login-logo"></div>
+    </div>
+  </div>
+  <div class="login-content">
+
+    <form class="login-form">
+      <h3 class="login-logo"></h3>
+      <span class=" {{isError  ? 'validation-msg error': 'validation-msg error hide'}}">Sorry, you have entered an invalid User ID.</span>
+      <div class="form-group">
+        <label for="username" class="form-control-label" style="font-weight: 100">User ID</label>
+        <input name="username" type="text" class="form-control1" #username required>
+        <!-- <span class="validation-msg error hide">Sorry, you have entered an invalid User ID.</span> -->
+      </div>
+      <div class="form-group">
+        <label for="password" class="form-control-label" style="font-weight: 100">PIN</label>
+        <input name="password" type="password" class="form-control1" name="password" #password required>
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-primary btn-block" (click)="login(username.value,password.value)">Login</button>
+      </div>
+      <ul class="login-links">
+        <li>
+          <a href="javascript:void(0)">Forgot User ID or PIN</a>
+        </li>
+
+      </ul>
+    </form>
+  </div>
+  <div class="login-footer">
+    <div class="bottom-links">
+      <h3>Happy Easter</h3>
+      <ul class="top-links">
+        <li>
+          <a href="">
+            <span class="fas fa-map-marker"></span> Find Us</a>
+        </li>
+        <li>
+          <a href="">
+            <span class="fas fa-info-circle"></span> Help &amp; Support</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="">© 2015 Infolog Logistics Suite by Infolog Pte Ltd. All Rights Reserved. Version: 2.0.4562.</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>BaseProject</title>
+  <base href="/">
+  <!-- Google Font -->
+
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="./assets/css/bootstrap.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./assets/fonts/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="./assets/css/ionicons.css">
+
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="./assets/css/jquery-jvectormap.css">
+
+  <link rel="stylesheet" href="./assets/css/AdminLTE.min.css" />
+  <!-- <link rel="stylesheet" href="./assets/css/normalize.css" /> -->
+  <link rel="stylesheet" href="./assets/css/_all-skins.css">
+
+  <link rel="stylesheet" href="./assets/primeng/primeng.css">
+  <link rel="stylesheet" href="./assets/primeng/themes/omega/theme.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <app-root></app-root>
+
+
+  <script src="./assets/js/jquery.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="./assets/js/jquery-ui.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button);
+  </script>
+  <!-- Bootstrap 3.3.7 -->
+  <script src="./assets/js/bootstrap.js"></script>
+  <!-- Sparkline -->
+  <script src="./assets/js/jquery.sparkline.js"></script>
+  <!-- AdminLTE App -->
+  <script src="./assets/js/adminlte.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      var inputs = document.querySelectorAll('.form-control1');
+      console.log('inputs ', inputs);
+      for (var i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener('focus', function () {
+          this.parentElement.classList.add('focus');
+        });
+        inputs[i].addEventListener('blur', function () {
+          if (this.value.length === 0) {
+            this.parentElement.classList.remove('focus');
+          }
+        });
+      }
+    })
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $("body").removeClass("skin-blue").addClass("skin-green-light");
+    });
+  </script>
+
+</body>
+
+</html>
