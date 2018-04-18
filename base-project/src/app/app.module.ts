@@ -1,3 +1,4 @@
+import { APP_BASE_HREF } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -28,12 +29,12 @@ import { environment } from '../environments/environment';
     ReactiveFormsModule
   ],
   imports: [
+    BrowserModule,
     AppRoutingModule,
     CoreModule,
-    BrowserModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -21,7 +21,7 @@ export class AuthService extends BaseService {
   }
 
   fetchedUser(): Observable<AdminUser[]> {
-
+    
     return this.http.get<AdminUser[]>(AppSetting.API_ENDPOIND + 'user')
       .map(response => { return response; })
       .catch(this.handleError);

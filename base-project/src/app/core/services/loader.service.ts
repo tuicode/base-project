@@ -6,7 +6,9 @@ export class LoaderService {
 
   constructor() { }
   isLoader: boolean = false;
+
   displayLoader(value: boolean) {
+    debugger;
     this.isLoader = value;
   }
 }

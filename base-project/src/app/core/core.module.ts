@@ -21,7 +21,6 @@ import { LoggerService } from './services/logger.service';
 @NgModule({
   imports: [
     CommonModule,
-    HttpClientModule,
   ],
   exports: [
     HomeComponent, LoginComponent, HomeLayoutComponent, LoginLayoutComponent, ContentWrapperComponent,
